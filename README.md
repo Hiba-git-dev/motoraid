@@ -1,58 +1,62 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+MotoRaid - L'écosystème numérique des motards au Maroc
+MotoRaid est une application SaaS Full-Stack (Laravel 11 + Vue 3 + Inertia.js) conçue pour centraliser l'expérience des motards au Maroc. Elle combine la location de motos, un planificateur GPS avancé, un réseau social communautaire et un système de sécurité en temps réel (SOS).
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+📄 Télécharger le Rapport de Stage (PDF)
 
-## About Laravel
+✨ Fonctionnalités Principales
+Multi-Rôles : Administrateur, Agence Partenaire, Utilisateur Normal, Utilisateur Premium.
+Marketplace B2B2C : L'admin crée les agences et gère la flotte (stock, numéros de série, photos). Les motards réservent avec une gestion automatique des dates pour éviter les surréservations.
+GPS Copil : Calcul d'itinéraires (OSRM), évitement des autoroutes, export GPX, météo en direct et hébergements partenaires sur la carte.
+Réseau Social (Ride Hubs) : Création de groupes, validation des membres par le leader, et chat de groupe en direct.
+Sécurité & Tracking : Suivi de position en direct sur la carte et bouton d'urgence SOS qui notifie l'administrateur et envoie un email au contact d'urgence.
+Monétisation : Système d'abonnement Premium intégré avec PayPal (mode Sandbox).
+Assistant IA : Chatbot flottant intégré pour conseiller les motards.
+📸 Aperçu du Projet
+(Placez vos captures d'écran dans un dossier screenshots à la racine du projet pour les afficher ici)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. Landing Page
+Landing Page
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+2. Dashboard Administrateur
+Dashboard Admin
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+3. Location de Motos (Marketplace)
+Location de Motos
 
-## Learning Laravel
+4. Planificateur GPS Avancé
+Planificateur GPS
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+🛠️ Stack Technique
+Backend : Laravel 11 (PHP 8.2+)
+Frontend : Vue.js 3 (Composition API) avec Inertia.js
+Base de données : SQLite (local)
+Design : Tailwind CSS (Dark Mode, Glassmorphism)
+Cartographie : Leaflet.js + OpenStreetMap + OSRM
+Paiement : PayPal API (Sandbox)
+🚀 Installation et Lancement
+Note : Les commandes ci-dessous permettent de faire tourner le projet en local.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Cloner le dépôt
+git clone https://github.com/votre-nom/motoraid.gitcd motoraid
+Installer les dépendances
+bash
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+composer install
+npm install
+Configuration de l'environnement
+Copier le fichier .env.example en .env
+Générer la clé d'application : php artisan key:generate
+Configurer la base de données SQLite dans le fichier .env.
+Initialiser la base de données
+bash
 
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
-
-```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
-```
-
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+php artisan migrate:fresh --seed
+php artisan storage:link
+Lancer les serveurs
+Backend : php artisan serve
+Frontend (Vite) : npm run dev
+👤 Comptes de test (Générés par le Seeder)
+Admin : admin@motoraid.ma / password
+Agence : partner@motoraid.ma / password
+Motard Premium : premium@motoraid.ma / password
+Motard Normal : user@motoraid.ma / password
