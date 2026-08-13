@@ -64,6 +64,8 @@ USER DASHBOARD
 <img width="1348" height="633" alt="image" src="https://github.com/user-attachments/assets/38aafa6a-6908-40f0-a34f-34a7ffba73c9" />
 <img width="1348" height="634" alt="image" src="https://github.com/user-attachments/assets/e9260dac-d801-4503-b173-45372e334219" />
 <img width="1365" height="633" alt="image" src="https://github.com/user-attachments/assets/d4200a0b-cf46-47ce-8bc1-0cf81b5fbab6" />
+<img width="1351" height="627" alt="image" src="https://github.com/user-attachments/assets/f0a566d4-a4ae-4e17-b017-7131f257c26f" />
+
 <img width="1349" height="628" alt="image" src="https://github.com/user-attachments/assets/51f4af5f-db0e-49dc-93ef-ded915cf0595" />
 <img width="1351" height="631" alt="image" src="https://github.com/user-attachments/assets/8b673328-889f-4978-9a0d-7ab7cb66313a" />
 <img width="1365" height="631" alt="image" src="https://github.com/user-attachments/assets/48b889db-1115-46bc-b80e-409b22d322ea" />
